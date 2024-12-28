@@ -1,0 +1,46 @@
+services:
+  shared:
+    container_name: shared
+    build:
+      context: .
+      dockerfile: ./projects/shared/Dockerfile
+    ports:
+      - "4200:80" # Map port 4200 on the host to port 80 in the container
+    restart: always
+
+  auth:
+    container_name: auth
+    build:
+      context: .
+      dockerfile: ./projects/auth/Dockerfile
+    ports:
+      - "4200:80" # Map port 4200 on the host to port 80 in the container
+    restart: always
+
+  dashboard:
+    container_name: dashboard
+    build:
+      context: .
+      dockerfile: ./projects/dashboard/Dockerfile
+    ports:
+      - "4201:80" # Map port 4200 on the host to port 80 in the container
+    restart: always
+
+  process-master:
+    container_name: process-master
+    build:
+      context: .
+      dockerfile: ./projects/process-master/Dockerfile
+    ports:
+      - "4202:80" # Map port 4200 on the host to port 80 in the container
+    restart: always
+
+  world-check:
+    container_name: world-check
+    build:
+      context: .
+      dockerfile: ./projects/world-check/Dockerfile
+    ports:
+      - "4203:80" # Map port 4200 on the host to port 80 in the container
+    restart: always
+
