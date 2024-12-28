@@ -1,0 +1,5 @@
+{
+	"dashboard": "http://localhost:4201/remoteEntry.json",
+	"process-master": "http://localhost:4202/remoteEntry.json",
+	"world-check": "http://localhost:4203/remoteEntry.json"
+}
