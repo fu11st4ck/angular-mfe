@@ -13,8 +13,11 @@ RUN npm install
 # Copy the rest of the application source code
 COPY . .
 
+# Build the share library
+RUN npm run ng build shared
+
 # Build the Angular application
-RUN npm run ng build --prod --project auth
+RUN npm run ng build auth --prod
 
 # Step 2: Use an Nginx image to serve the Angular app
 FROM nginx:1.23
