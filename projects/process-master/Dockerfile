@@ -23,7 +23,7 @@ RUN npm run ng build process-master --prod
 FROM nginx:1.23
 
 # Copy the built Angular app to the Nginx HTML directory
-COPY --from=build /app/dist/process-master /usr/share/nginx/html
+COPY --from=build /app/dist/process-master/browser /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80

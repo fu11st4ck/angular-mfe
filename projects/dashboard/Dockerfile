@@ -23,7 +23,7 @@ RUN npm run ng build dashboard --prod
 FROM nginx:1.23
 
 # Copy the built Angular app to the Nginx HTML directory
-COPY --from=build /app/dist/dashboard /usr/share/nginx/html
+COPY --from=build /app/dist/dashboard/browser /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
