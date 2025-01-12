@@ -1,0 +1,10 @@
+{
+  "name": "processmaster-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/processmaster-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["processmaster"],
+  "// targets": "to see all targets run: nx show project processmaster-e2e --web",
+  "targets": {}
+}
