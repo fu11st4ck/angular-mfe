@@ -7,7 +7,7 @@ import { AuthService } from '@ezms/shared';
   selector: 'app-dashboard-entry',
   template: `
     <p>dashboard app works!</p>
-    <button (click)="logout()")>Logout</button>
+    <button (click)="logout()">Logout</button>
   `,
 })
 export class RemoteEntryComponent {
